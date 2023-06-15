@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 function App() {
   return (
     <>
-      <h1>Stateful List</h1>
+      <h1>My Project</h1>
       <ListDemo />
     </>
   );
@@ -23,17 +23,36 @@ function ListDemo() {
 
   return (
     <>
-      <input
-        type="text"
-        id="id1"
-        ref={inputRef}
-        placeholder="Enter user input..."
-      />
-      <input type="button" value="Add New Item" onClick={addItemAction} />
-
-      {list.map((item) => (
-        <MessageDemo message={item} />
-      ))}
+      <div
+        className="row justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div className="col-sm-12 col-md-6">
+          <h1>Registraton App</h1>
+          <input
+            className="form-control"
+            type="text"
+            id="id1"
+            ref={inputRef}
+            placeholder="Enter user input..."
+          />
+          <input
+            className="form-control"
+            type="text"
+            id="id1"
+            ref={inputRef}
+            placeholder="Enter Password..."
+          />
+          <input
+            className="form-control"
+            type="text"
+            id="id1"
+            ref={inputRef}
+            placeholder="Enter Email..."
+          />
+          <input type="button" value="Login" onClick={addItemAction} />
+        </div>
+      </div>
     </>
   );
 }
