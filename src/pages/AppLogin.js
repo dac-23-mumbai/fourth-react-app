@@ -29,9 +29,10 @@ function AppLogin() {
       if (!formStatus) {
         return;
       }
+      localStorage.setItem("login", "true");
 
       // TODO BACKEND :: ...
-      navigate("/home");
+      navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
       setIsError(true);
