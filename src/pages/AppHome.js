@@ -3,28 +3,31 @@ import { Carousel } from "react-bootstrap";
 function AppHome() {
   return (
     <>
-      <div className="row justify-content-center">
-        <div className="col-sm-12 col-md-10">
-          <MyAppCarousel />
-        </div>
-      </div>
-
-      {/** Flash card */}
-      <div className="row justify-content-center">
-        <div className="col-sm-12 col-md-10">
-          <div className="alert alert-secondary fs-4 p-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
-            numquam itaque odio, tempore maxime nemo expedita debitis iure modi
-            saepe fugit sed ipsam, id doloribus vel corporis nulla ad assumenda!
-            Lorem ipsum dolor sit, corporis nulla ad assumenda!
+    {/* hero */}
+      <div className="row  mt-2 align-items-center" style={{ height: "80vh" }} >
+        <div className="col-md-6 col-sm-12">
+          <div className="row justify-content-center ">
+            <div className="col-6">
+              <h1 className="fa-school-flag">Private Chef</h1>
+              <p className="f">Enjoy a customized culinary experience with a Private Chef in the comfort of your own home.
+              </p>
+              <button className="btn btn-rounded btn-lg rounded-5 btn-warning border-1">Get Started</button>
+            </div>
           </div>
         </div>
+        <div className="col-md-6 col-sm-12">
+            <img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-fluid rounded-5 pe-2" alt=""/>
+        </div>
       </div>
+      <hr />
 
-      <AppCard />
+
+
+      {/* cards */}
+
     </>
   );
-}
+};
 
 function AppCard() {
   let list = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
