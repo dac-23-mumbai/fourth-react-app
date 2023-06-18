@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function MyUserList() {
+  let navigate = useNavigate();
   const [userList, setUserList] = useState([]);
 
   useEffect(() => {
@@ -35,6 +37,10 @@ function MyUserList() {
     }
   };
 
+  const editUserAction = (item) => {
+    navigate("/registration");
+  };
+
   return (
     <>
       <div className="row justify-content-center">
@@ -60,7 +66,12 @@ function MyUserList() {
                   <td>{item.email}</td>
                   <td>{item.mobile}</td>
                   <td className="fs-5">
-                    <input type="button" value="&#x270E;" /> /{" "}
+                    <input
+                      type="button"
+                      value="&#x270E;"
+                      onClick={() => editUserAction(item)}
+                    />{" "}
+                    /
                     <input
                       type="button"
                       value="&#128686;"
