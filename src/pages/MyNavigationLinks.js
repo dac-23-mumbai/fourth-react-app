@@ -43,6 +43,9 @@ function MyNavigationLinks() {
               <Nav.Link as={Link} to={"/validation-demo"}>
                 ValidationDemo
               </Nav.Link>
+              <Nav.Link as={Link} to={"/nitin-page"}>
+                Nitin Page
+              </Nav.Link>
               <Nav.Link onClick={logOutAction}>Log Out</Nav.Link>
             </Nav>
           </Navbar.Collapse>

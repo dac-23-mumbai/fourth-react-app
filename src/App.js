@@ -7,6 +7,7 @@ import MyUserList from "./pages/MyUserList";
 import ValidationDemo from "./pages/ValidationDemo";
 import AppHome from "./pages/AppHome";
 import AppLogin from "./pages/AppLogin";
+import NitinPage from "./pages/NitinPage";
 
 function App() {
   return (
@@ -50,6 +51,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <MyUserList />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/nitin-page"
+            element={
+              <ProtectedRoute>
+                <NitinPage />
               </ProtectedRoute>
             }
           />
