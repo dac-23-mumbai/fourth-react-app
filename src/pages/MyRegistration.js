@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function MyRegistration() {
   let formRef = useRef();
@@ -118,6 +119,10 @@ function MyRegistration() {
               className="w-100 btn btn-lg btn-secondary"
               onClick={registerAction}
             />
+
+            <div className="d-flex justify-content-center ">
+              <Link to={"/login"}>Existing User, Login here</Link>
+            </div>
           </form>
 
           {isSuccess && <div className="alert alert-success">Success</div>}

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AppLogin() {
   const navigate = useNavigate();
@@ -90,6 +90,10 @@ function AppLogin() {
               className="w-100 btn btn-lg btn-secondary"
               onClick={loginAction}
             />
+
+            <div className="d-flex justify-content-center ">
+              <Link to={"/registration"}>New User, Register here</Link>
+            </div>
           </form>
 
           {isSuccess && <div className="alert alert-success">Success</div>}
