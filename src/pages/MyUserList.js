@@ -15,6 +15,26 @@ function MyUserList() {
     setUserList([...list]);
   };
 
+  const deleteUserAction = async (item) => {
+    try {
+      // backend call delete this user.
+      let url = `http://localhost:4000/delete-user?email=${item.email}`;
+      let res = await fetch(url);
+
+      if (res.status == 500) {
+        let erroMessage = await res.text();
+        throw new Error(erroMessage);
+      }
+
+      alert("success");
+
+      // refresh the page on success
+      getAllUserAction();
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
   return (
     <>
       <div className="row justify-content-center">
@@ -41,7 +61,12 @@ function MyUserList() {
                   <td>{item.mobile}</td>
                   <td className="fs-5">
                     <input type="button" value="&#x270E;" /> /{" "}
-                    <input type="button" value="&#128686;" />
+                    <input
+                      type="button"
+                      value="&#128686;"
+                      // onClick={deleteUserAction}
+                      onClick={() => deleteUserAction(item)}
+                    />
                   </td>
                 </tr>
               ))}
