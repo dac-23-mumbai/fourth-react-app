@@ -9,6 +9,18 @@ function AppHome() {
         </div>
       </div>
 
+      <div className="row justify-content-center">
+        <div className="col-sm-12 col-md-10">
+          <iframe
+            width="100%"
+            height="400"
+            className=""
+            src="https://www.youtube.com/embed/F4623_UQCT0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
       {/** Flash card */}
       <div className="row justify-content-center">
         <div className="col-sm-12 col-md-10">
